@@ -3,7 +3,7 @@ pipeline {
     label {jenkins}
     stages {
        stage ('git clone') {
-            git clone 'https://github.com/nanaji-git/onlinebookstore.git'
+            git 'https://github.com/nanaji-git/onlinebookstore.git'
      }
   }
 }
