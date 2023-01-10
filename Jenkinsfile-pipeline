@@ -11,10 +11,9 @@ pipeline {
           sh 'mvn clean install'
           }
           }
-    post {
-        always {
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
+    stage {
+      steps {
+         sh 'mvn clean verify -DskipITs=true';junit '**/target/surefire-reports/TEST-*.xml'archive 'target/*.jar'
         }
     }
     stage ('sonar scan') {
