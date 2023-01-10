@@ -11,5 +11,11 @@ pipeline {
           sh 'mvn clean install'
           }
           }
+    stage ('sonar scan') {
+       steps {
+         sh 'mvn sonar:sonar'
+       }
+     }  
+    
 }
 }
