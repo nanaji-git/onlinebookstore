@@ -2,7 +2,7 @@ pipeline {
   agent 
     label {jenkins}
     stages {
-       stage ('git clone') {
+       steps ('git clone') {
             git 'https://github.com/nanaji-git/onlinebookstore.git'
      }
   }
