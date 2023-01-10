@@ -12,10 +12,11 @@ pipeline {
           }
           }
     post {
-    always {
-      junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
-      }
-      }
+        always {
+            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+            junit 'build/reports/**/*.xml'
+        }
+    }
     stage ('sonar scan') {
        steps {
          withSonarQubeEnv('sonarqube') { 
