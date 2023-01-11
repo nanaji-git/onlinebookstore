@@ -21,6 +21,6 @@ pipeline {
     }
    stage ('artifact to nexus ')  {
       steps {
-         nexusArtifactUploader artifacts: [[artifactId: 'onlinebookstore', classifier: '', file: 'onlinebookstore.war', type: 'war']], credentialsId: 'nexus', groupId: 'onlinebookstore', nexusUrl: '18.144.49.172:8085', nexusVersion: 'nexus2', protocol: 'http', repository: 'nexus-repo', version: '0.0.1-SNAPSHOT'
+         nexusArtifactUploader artifacts: [[artifactId: 'onlinebookstore', classifier: '', file: 'onlinebookstore.war', type: 'war']], credentialsId: 'nexus', groupId: 'onlinebookstore', nexusUrl: '13.57.230.166:8085', nexusVersion: 'nexus2', protocol: 'http', repository: 'nexus-repo', version: '0.0.1-SNAPSHOT'
 }
 }
