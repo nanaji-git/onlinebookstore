@@ -46,7 +46,7 @@ pipeline {
           sshagent(['tomcat']) {
           sh """
           scp -o StrictHostKeyChecking=no target/onlinebookstore.war  
-          tomcat@54.219.30.149:/opt/tomcat/webapps/
+          tomcat@172.31.24.74:/opt/tomcat/webapps/
           ssh tomcat@172.31.24.74 /opt/tomcat/bin/shutdown.sh
           ssh tomcat@172.31.24.74 /opt/tomcat/bin/startup.sh
            """
