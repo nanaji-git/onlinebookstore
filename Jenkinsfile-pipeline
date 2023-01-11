@@ -45,7 +45,7 @@ pipeline {
        steps{
           sshagent(['tomcat']) {
           sh """
-          scp -o StrictHostKeyChecking=no target/onlinebookstore.war ubuntu@172.31.24.74:/opt/tomcat/webapps/
+          scp -o StrictHostKeyChecking=no target/onlinebookstore.war tomcat@172.31.24.74:/opt/tomcat/webapps/
            """
             }
           }
