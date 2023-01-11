@@ -25,12 +25,12 @@ pipeline {
         nexusVersion: 'nexus3',
         protocol: 'http',
         nexusUrl: '13.57.230.166:8085',
-        groupId: 'com.',
-        version: version,
-        repository: 'RepositoryName',
-        credentialsId: 'CredentialsId',
+        groupId: 'onlinebookstore',
+        version: '4.0.0',
+        repository: 'nexus-repo',
+        credentialsId: 'nexus',
         artifacts: [
-            [artifactId: projectName,
+            [artifactId: 'onlinebookstore',
              classifier: '',
              file: 'my-service-' + version + '.jar',
              type: 'jar']
