@@ -43,7 +43,7 @@ pipeline {
  } 
    stage("deploy in tomcat"){
        steps{
-          sshagent(['tomcat']) {
+          sshagent(['tom']) {
           sh """
           scp -o StrictHostKeyChecking=no target/onlinebookstore.war  
           tomcat@172.31.24.74:/opt/tomcat/webapps/
