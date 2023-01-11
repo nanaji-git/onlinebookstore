@@ -19,24 +19,6 @@ pipeline {
        }
      }  
     }
-   stage ('artifact to nexus ')  {
-      steps {
-         nexusArtifactUploader(
-        nexusVersion: 'nexus3',
-        protocol: 'http',
-        nexusUrl: '13.57.230.166:8085',
-        groupId: 'onlinebookstore',
-        version: '4.0.0',
-        repository: 'nexus-repo',
-        credentialsId: 'nexus',
-        artifacts: [
-            [artifactId: 'onlinebookstore',
-             classifier: '',
-             file: 'my-service-' + version + '.jar',
-             type: 'jar']
-        ]
-     )
-}
-}
+   
 }
 }
