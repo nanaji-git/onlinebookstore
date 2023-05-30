@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-deployment
+  labels:
+    app: online
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: online
+  template:
+    metadata:
+      labels:
+        app: online
+    spec:
+      containers:
+      - name: onlinestore
+        image: nanajiseelam/onlinebookstore
+        ports:
+        - containerPort: 8090
