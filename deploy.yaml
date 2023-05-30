@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: onlinestore
-        image: nanajiseelam/onlinebookstore
+        image: nanajiseelam/onlinebookstore:tagname
         ports:
         - containerPort: 8090
